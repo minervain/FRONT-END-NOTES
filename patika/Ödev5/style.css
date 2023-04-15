@@ -1,0 +1,19 @@
+.ad{
+    list-style: none;
+}
+
+.ad li{
+    display: inline;
+    margin-right: 15px;
+    color: red;
+}
+*{
+    text-align: center;
+}
+.asd li{
+    list-style-position: inside;
+}
+.ds li{
+    list-style-position: inside;
+
+}
