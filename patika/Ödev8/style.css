@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+}
+
+.head{
+    padding: 3px;
+}
+
+.headd div a {
+    text-decoration: none;
+    color: white;
+}
+
+.headd div a:hover{
+    background-color: blue;
+}
+
+.s li{
+    list-style-position: inside;
+}
+.card{
+    margin-top: 6px;
+}
