@@ -31,7 +31,7 @@ function formHandler(event) {
         alertDOM.innerHTML = alertFunction(
             "Baslik Bilgisi",
             "Eksik Bilgi Girdiniz",
-            "danger"
+            "success"
         )
     }
     
@@ -50,7 +50,7 @@ const addItem = (userName, score) => {
     liDOM.classList.add(
         'list-group-item', 'd-flex', 'justify-content-between', 'align-items-center'
     )
-    userListDOM.append(liDOM)
+    userListDOM.append(liDOM) //nereye eklediğimize karar veriyoruz append=eklemek
 }
 
 // Popover Kullanımı:
