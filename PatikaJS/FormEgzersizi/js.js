@@ -11,12 +11,12 @@ let userFormDOM = document.querySelector('#userForm')
 userFormDOM.addEventListener('submit', formHandler)
 const alertDOM = document.querySelector('#alert')
 
-const alertFunction = (title, message, className="warning") => `
-<div class="alert alert-${className} alert-dismissible fade show" role="alert">
-  <strong>${title}</strong> ${message}
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-`
+// const alertFunction = (title, message, className="warning") => `
+// <div class="alert alert-${className} alert-dismissible fade show" role="alert">
+//   <strong>${title}</strong> ${message}
+//   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+// </div>
+// `
 
 function formHandler(event) {
     event.preventDefault()

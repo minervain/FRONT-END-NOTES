@@ -71,7 +71,7 @@
   
   img {
     background-color: white;
-  }
+    }
   
   .header:after {
     content: "";
@@ -105,3 +105,6 @@
   .button:hover {
     background-color: #bbb;
   }
+  .input{
+text-align: center;
+    }
