@@ -107,3 +107,11 @@
     width: 100%;
     min-height: 100vh;
   }
+
+  li:hover{
+    background-color: #f78501;
+  }
+  .checked {
+    text-decoration: line-through;
+    background-color: #b55151;
+  }
