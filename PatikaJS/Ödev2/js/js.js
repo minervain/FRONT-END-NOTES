@@ -9,7 +9,8 @@ let input=document.querySelector("#task")
 let ulDOM=document.querySelector("#list")
 let focs = document.querySelector('#liveToastBtn')
 
-
+let addBtn = document.querySelector('#toastWarning')
+let addToast = document.querySelector('#liveToast')
 
 
 input.addEventListener("submit",newElement)
@@ -24,10 +25,7 @@ if(input.value){
 }
 
 else{
-    // alertDOM.innerHTML = alertFunction(
-    //             "Baslik Bilgisi",      "Eksik Bilgi Girdiniz",
-    //             "success"
-    //          )
+    toastGoster();
          }
 
 
@@ -35,21 +33,51 @@ else{
 
 
  function addItem(gelendeger){
-    let liDOM = document.createElement('li')
-    liDOM.innerHTML=`${gelendeger}`
-    liDOM.className = "list-group-item list-group-item-secondary";
-    const a = document.createElement("a");
-    a.classList = "delete-item float-right";
-    a.setAttribute("href", "#");
-    a.innerHTML = '<i class="fas fa-times"></i>';
+    let li = document.createElement('li')
+        li.innerHTML = input.value;
+        ulDOM.appendChild(li)
+        let btn = document.createElement("button")
+        btn.innerHTML = "x"
+        btn.classList.add('close')
+        li.appendChild(btn)
+        addToastF();
 
 
-    ulDOM.prepend(liDOM)
+    ulDOM.prepend(li)
+    addToastF();
 
- }
+ }0
 
  function listClick(e) {
     if (e.target.tagName == "LI") {
       e.target.classList.toggle("checked");
     }
   }
+
+  function alertFunction(e) {
+
+
+  }
+ 
+
+  /**TOAST  */
+
+  let toastGoster = () => {
+    var show = new bootstrap.Toast(addBtn)
+    show.show()
+}
+let addToastF = () => {
+    var goster = new bootstrap.Toast(addToast)
+    goster.show()
+}
+
+
+ulDOM.addEventListener('click', function (e) {
+    if (e.target.tagName === "LI") {
+       
+     
+    } else if (e.target.tagName === "BUTTON") {
+        e.target.parentElement.remove();
+   
+    }
+}, false);
